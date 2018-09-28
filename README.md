@@ -50,7 +50,7 @@ OBS: A organização das pastas e código fica por sua conta.
 - Atenção aos detalhes (Boas práticas, indentação, etc...)
 - Se está fiel aos requesitos acima.
 
-Link para api: https://8ex6o98ek9.execute-api.us-west-2.amazonaws.com/2018/getStudent
+Link para api: https://xmlapi.herokuapp.com/example/xml
 
 Se houver duvidas pode abrir issues e responderemos ASAP.
 
