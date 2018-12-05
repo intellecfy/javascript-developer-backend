@@ -1,64 +1,87 @@
-#  Javascript Developer:  NODEJS
+#  Javascript Developer: Back-End
 
-**Prefere React? Saque: [Javascript Developer: REACT](https://github.com/intellecfy/javascript-developer-react)**
+## Agora é hora de por a mão na massa. :)
 
-## Curtiu nossa vaga? 
+Você poderá fazer o teste de duas formas, são elas:
 
-Há muita coisa para fazer! Por isso buscamos desenvolvedores capazes de trabalhar, assim que contratados, confortavelmente com as tecnologias abaixo:
+* Criar uma API com autenticação por JWT utilizando algum framework NodeJS, ou
+* Criar uma API utilizando uma arquitetura serverless na AWS.
 
-- Javascript
-- Node.js
-- Serverless(AWS)
-- XML e JSON
-- SQL
+## Instruções para o teste:
 
-## Achou tranquilo? Legal! O processo de seleção será o seguinte: 
+### API NodeJS:
 
-- Para ajudar nossa busca, criamos um teste básico que demonstra um pouco do tipo de trabalho que você precisará executar no seu dia a dia caso seja contratado. As instruções e o que você precisa saber estarão no final desta página.  
+- Crie uma API com os seguintes endpoints
+	- login
+	- diary
+- O endpoint **/login** vai receber **username** e **password** e retornar um **JWT**.
+- Você pode guardar o **username** e **password** em um banco como MongoDB ou no próprio arquivo .js.
+- Para que o endpont **/diary** retorne **200** será necessário validar o **JWT** que será enviado pelo header.
 
-- Nos envie seu teste.
+**Dica**
 
-- Nós avaliaremos e no caso de curtirmos, marcaremos uma conversa pra te conhecer melhor e alinhar nossas expectativas.
+Você pode selecionar um framework que te possibilite trabalhar com maior velocidade e de forma mais dinâmica. 
+**Express, Restify,  FeathersJS e etc**
 
-- Com as expectativas alinhadas e nos entendendo, faremos uma proposta para você.
-  
-- O valor será algo entre R$2.500,00 a R$4.000,00 e dependerá do nível das skills que enxergarmos em você.
+### API serverless AWS:
 
-- Valores acertados e ambas as partes felizes, começaremos a nossa jornada ASAP!
+Se você optar por essa abordagem, você vai precisar criar uma conta gratuíta na AWS, criar a API e apresentar a solução por Skype.
 
-## Acompanhou até aqui? Agora é só executar as instruções abaixo e nos mandar o teste:
+Você deve utilizar:
 
-### Instruções para o teste:
+- **Amazon Cognito** para autorizar o usuário
+- **Amazon API Gateway** para criar o endpoint **{{domain}}/diary**
+- **Amazon DynamoDB** para guardar a lista de diarios
+- **AWS Lambda** para integrar os serviços
 
-- Você precisa consumir uma API em XML que nós forneceremos abaixo.
-- Normalizar os dados e transformá-los em JSON.
-- Você deve utilizar Express ou Restify para criar uma API e disponibilizar esse JSON.
-- Todas as etapas do seu código devem ser testadas, use mochajs.
+## Mais informações
 
-OBS: A organização das pastas e código fica por sua conta.
+- Documente sua API utilzando o Postman
+- Diary JSON
 
-- Quando terminar commit tudo no fork que você fez, depois envie as seguintes informações para jobs@intellecfy.com com o assunto “BACK-END - ”:
-	- O endereço do seu teste
-	- Suas informações de contato, (nome, e-mail, WhatsApp/Telegram/Phone, LinkedIn)
-	- Seu CV
-	
-#### Quais as principais coisas que vamos analizar nesse teste:
+```javascript
+[{
+	"date": "08-01-2015",
+	"day": "Thursday",
+	"tasks": [
+		"Task 1",
+		"Task 2"
+		]
+},
+{
+	"date": "09-01-2015",
+	"day": "Friday",
+	"tasks": [
+		"Task 1"
+	]
+}]
+
+```
+
+## O que será avaliado:
+
 - Se o código está claro, clean code na veia!
-- Se está rodando sem erros
-- Se o build ocorre sem erros
-- Se tem erros de lint
+- Se está rodando sem erros.
 - Atenção aos detalhes (Boas práticas, indentação, etc...)
-- Se está fiel aos requesitos acima.
+- Se há testes unitários.
+- Se há uma forma de testar o código, como Postman.
+- Sua astucia e capacidade de resolver o problema
 
-Link para api: https://xmlapi.herokuapp.com/example/xml
+## Quando terminar:
 
-Se houver duvidas pode abrir issues e responderemos ASAP.
-
+Se escolheu a **API NodeJS**, suba seu projeto em algum gerenciador de repositório de software baseado em git e nos envio o link do projeto. No caso da **AWS**, assim que terminar entre em contato para marcar a apresentação por Skype.
 
 **Vamos nos esforçar para dar um feedback caso você passe ou não, mas não poderemos garantir isso se recebermos uma quantidade muito grande de testes.**
 
 Alguns links úteis:
 
-- Mochajs - <https://mochajs.org/>
 - Express - <https://expressjs.com/pt-br/>
 - Restify - <http://restify.com/>
+- FeathersJS- <https://feathersjs.com/>
+- Mochajs - <https://mochajs.org/>
+- Postman - <https://www.getpostman.com/>
+- AWS Cognito - <https://aws.amazon.com/pt/cognito/>
+- AWS API Getway- <https://aws.amazon.com/pt/api-gateway/>
+- AWS Dynamodb - <https://aws.amazon.com/pt/dynamodb/>
+- AWS Lambda - <https://aws.amazon.com/pt/lambda/>
+
